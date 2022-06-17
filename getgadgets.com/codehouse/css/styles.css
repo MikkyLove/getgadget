@@ -48,7 +48,7 @@ h1 {
 }
 
 .seeMoreButton:hover {
-    background: var(--grey);
+    opacity: .7;
     transition: all ease-in 300ms;
 }
 
@@ -162,11 +162,6 @@ h1 {
     height: var(--adHeight);
     margin: 10px;
     cursor: pointer;
-}
-
-#laptop button:hover {
-    background: var(--grey);
-    transition: all ease-in .2s;
 }
 
 
