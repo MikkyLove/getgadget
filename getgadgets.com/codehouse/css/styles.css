@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -11,7 +13,9 @@
     --red: rgb(255, 0, 0);
     --blue: rgb(0, 0, 255);
     --adWidth: 400px;
+    /*advertisement width*/
     --adHeight: 250px;
+    /* advertisement height*/
 }
 
 body {
@@ -19,6 +23,7 @@ body {
     background: var(--black);
     color: var(--white);
     font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
@@ -38,6 +43,11 @@ h1 {
     background: var(--white);
 }
 
+.seeMoreButton:hover {
+    background: var(--grey);
+    transition: all ease-in 300ms;
+}
+
 .blue {
     color: var(--blue);
 }
@@ -51,6 +61,15 @@ h1 {
 
 header #logo {
     text-align: center;
+}
+
+header #logo #login {
+    margin: 0 0 50px;
+}
+
+header #logo #login a button {
+    display: inline-block;
+    margin: 40px;
 }
 
 header #logo img {
@@ -165,5 +184,4 @@ h1 {
     display: flex;
     justify-content: space-between;
     overflow-x: auto;
-    margin: ;
 }

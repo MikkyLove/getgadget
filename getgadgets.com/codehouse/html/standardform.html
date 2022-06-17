@@ -8,6 +8,10 @@
     <title>Standard Form</title>
     <link rel="stylesheet" href="../css/formstyles.css">
     <link rel="shortcut icon" href="../../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/10d261e7ba.js"></script>
 </head>
 
 <body>
@@ -18,61 +22,128 @@
 
     </header>
 
+    <!-- form section -->
+
     <div id="formSection">
 
         <form action="POST">
 
-            <div id="firstName" class="labelContainer">
+            <div id="firstNameContainer" class="labelContainer">
 
                 <label>First Name</label> <br>
-                <input type="text" placeholder="eg. John" minlength="2" name="firstName" id="firstName" autofocus>
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-user push"></i>
+                    <input type="text" placeholder="eg. John" minlength="2" name="firstName" id="firstName" autofocus autocomplete>
+
+                </div>
 
             </div>
 
-            <div id="lastName" class="labelContainer">
+
+
+
+
+            <div id="lastNameContainer" class="labelContainer">
 
                 <label>Last Name</label> <br>
-                <input type="text" placeholder="eg. Doe" minlength="2" name="lastName" id="lastName" autofocus>
+
+                <div class="inputBorder">
+
+
+                    <i class="fa fa-user push"></i>
+                    <input type="text" placeholder="eg. Doe" minlength="2" name="lastName" id="lastName" autocomplete>
+
+                </div>
             </div>
 
-            <div id="nationality" class="labelContainer">
+
+
+
+
+            <div id="nationalityContainer" class="labelContainer">
 
                 <label>Nationality</label> <br>
-                <input type="text" placeholder="eg. Nigerian" name="nationality" id="nationality">
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-flag-checkered push"></i>
+                    <input type="text" placeholder="eg. Nigerian" name="nationality" id="nationality" autocomplete>
+
+                </div>
             </div>
 
-            <div id="emailAddress" class="labelContainer">
+
+
+
+
+            <div id="emailContainer" class="labelContainer">
 
                 <label>Email Address</label> <br>
-                <input type="email" placeholder="eg. johndoe@gmail.com" minlength="10" name="email" id="email">
+                <div class="inputBorder">
+                    <i class="fa fa-envelope push"></i>
+                    <input type="email" placeholder="eg. johndoe@gmail.com" minlength="10" name="email" id="email" autocomplete>
+                </div>
 
             </div>
 
-            <div id="phoneNumber" class="labelContainer">
+
+
+
+
+            <div id="phoneNumberContainer" class="labelContainer">
 
                 <label>Phone Number</label> <br>
-                <input type="number" placeholder="eg. +1 2345 6789" name="phoneNumber" id="phoneNumber">
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-phone-square push"></i>
+                    <input type="number" placeholder="eg. +1 2345 6789" name="phoneNumber" id="phoneNumber" autocomplete>
+
+                </div>
             </div>
 
-            <div id="username" class="labelContainer">
+
+
+
+
+            <div id="usernameContainer" class="labelContainer">
 
                 <label>Username</label> <br>
-                <input type="text" placeholder="eg. JohnDoe" minlength="2" name="username" id="username">
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-user-circle-o push"></i>
+                    <input type="text" placeholder="eg. JohnDoe" minlength="2" name="username" id="username">
+
+                </div>
             </div>
 
-            <div id="password" class="labelContainer">
+
+
+
+
+            <div id="passwordContainer" class="labelContainer">
 
                 <label>Password</label> <br>
-                <input type="password" placeholder="eg. 123456" minlength="6" name="password" id="password">
+                <div class="inputBorder">
+
+                    <i class="fa fa-lock push"></i>
+                    <input type="password" placeholder="eg. 123456" minlength="6" name="password" id="password" autocomplete> <i class="fa fa-eye" onclick="showPassword()" id="eyeControl" style="color:rgb(255, 0, 0);"></i>
+
+                </div>
 
             </div>
 
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
+            <button type="submit">SUBMIT</button>
+            <button type="reset">RESET</button>
 
         </form>
 
     </div>
+
+    <script src="../js/script.js"></script>
 
 </body>
 
