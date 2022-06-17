@@ -1,103 +1,102 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: 'Montserrat', sans-serif;
-}
-
-:root {
-    --black: rgb(0, 0, 0);
-    --white: rgb(255, 255, 255);
-    ;
-    --grey: rgb(216, 213, 213);
-    --red: rgb(255, 0, 0);
-    --blue: rgb(0, 0, 255);
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    background-color: var(--black);
-    overflow-x: hidden;
-    color: var(--white);
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: 'Montserrat', sans-serif;
-}
-
-header {
-    text-align: center;
-}
-
-header img {
-    width: 350px;
-    height: 350px;
-}
-
-#formSection {
-    width: fit-content;
-    margin: auto;
-}
-
-form {
-    text-align: center;
-}
-
-
-/* .labelContainer:nth-child(odd) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+     :root {
+        --black: rgb(0, 0, 0);
+        --white: rgb(255, 255, 255);
+        ;
+        --grey: rgb(216, 213, 213);
+        --red: rgb(255, 0, 0);
+        --blue: rgb(0, 0, 255);
+    }
+    
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        background-color: var(--black);
+        overflow-x: hidden;
+        color: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+        font-family: 'Montserrat', sans-serif;
+    }
+    
+    header {
+        text-align: center;
+    }
+    
+    header img {
+        width: 350px;
+        height: 350px;
+    }
+    
+    #formSection {
+        width: fit-content;
+        margin: auto;
+    }
+    
+    form {
+        text-align: center;
+    }
+    /* .labelContainer:nth-child(odd) {
     color: red;
     right: 5px;
 } */
-
-form .labelContainer {
-    margin: 70px;
-    text-align: left;
-}
-
-form label {
-    color: var(--blue);
-    font-size: 21px;
-}
-
-form input {
-    width: 30vw;
-    height: 50px;
-    border: none;
-    background: transparent;
-    color: var(--white);
-    padding: 10px;
-    float: none;
-}
-
-form .inputBorder {
-    width: auto;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--white);
-    float: none;
-}
-
-form input:focus {
-    outline: none;
-    background: transparent;
-}
-
-.push {
-    padding: 0 0 0 25px;
-    color: red;
-}
-
-button {
-    margin: 30px 20px 50px 0;
-    width: 100px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 700;
-    background: var(--white);
-}
-
-button:hover {
-    background: var(--grey);
-    transition: all ease-in 300ms;
-}
+    
+    form .labelContainer {
+        margin: 70px;
+        text-align: left;
+    }
+    
+    form label {
+        color: var(--blue);
+        font-size: 21px;
+    }
+    
+    form input {
+        width: 30vw;
+        min-width: 350px;
+        height: 50px;
+        border: none;
+        background: transparent;
+        color: var(--white);
+        padding: 10px;
+        float: none;
+    }
+    
+    form .inputBorder {
+        width: auto;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--white);
+        float: none;
+    }
+    
+    form input:focus {
+        outline: none;
+        background: transparent;
+    }
+    
+    .push {
+        padding: 0 0 0 25px;
+        color: red;
+    }
+    
+    button {
+        margin: 30px 20px 50px 0;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: 700;
+        background: var(--white);
+    }
+    
+    button:hover {
+        background: var(--grey);
+        transition: all ease-in 300ms;
+    }
