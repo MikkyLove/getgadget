@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Form</title>
+    <link rel="stylesheet" href="../css/formstyles.css">
+    <link rel="shortcut icon" href="../../images/logo.png">
+</head>
+
+<body>
+
+    <header>
+
+        <img src="../../images/logo.png" alt="Our Logo">
+
+    </header>
+
+    <div id="formSection">
+
+        <form action="POST">
+
+            <div id="firstName" class="labelContainer">
+
+                <label>First Name</label> <br>
+                <input type="text" placeholder="eg. John" minlength="2" name="firstName" id="firstName" autofocus>
+
+            </div>
+
+            <div id="lastName" class="labelContainer">
+
+                <label>Last Name</label> <br>
+                <input type="text" placeholder="eg. Doe" minlength="2" name="lastName" id="lastName" autofocus>
+            </div>
+
+            <div id="nationality" class="labelContainer">
+
+                <label>Nationality</label> <br>
+                <input type="text" placeholder="eg. Nigerian" name="nationality" id="nationality">
+            </div>
+
+            <div id="emailAddress" class="labelContainer">
+
+                <label>Email Address</label> <br>
+                <input type="email" placeholder="eg. johndoe@gmail.com" minlength="10" name="email" id="email">
+
+            </div>
+
+            <div id="phoneNumber" class="labelContainer">
+
+                <label>Phone Number</label> <br>
+                <input type="number" placeholder="eg. +1 2345 6789" name="phoneNumber" id="phoneNumber">
+            </div>
+
+            <div id="username" class="labelContainer">
+
+                <label>Username</label> <br>
+                <input type="text" placeholder="eg. JohnDoe" minlength="2" name="username" id="username">
+            </div>
+
+            <div id="password" class="labelContainer">
+
+                <label>Password</label> <br>
+                <input type="password" placeholder="eg. 123456" minlength="6" name="password" id="password">
+
+            </div>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
