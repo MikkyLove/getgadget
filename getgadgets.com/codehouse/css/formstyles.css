@@ -58,8 +58,7 @@
     }
     
     form input {
-        width: 30vw;
-        min-width: 350px;
+        width: 40vw;
         height: 50px;
         border: none;
         background: transparent;
