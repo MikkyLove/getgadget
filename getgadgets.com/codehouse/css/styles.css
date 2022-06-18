@@ -36,7 +36,7 @@ h1 {
 .seeMoreButton {
     width: 150px;
     height: 70px;
-    margin-top: 20px;
+    margin-top: 0;
     cursor: pointer;
     font-weight: 400;
     font-size: 18px;
@@ -77,8 +77,9 @@ header #logo #login a button {
 }
 
 header #logo img {
-    width: 350px;
-    height: 350px;
+    width: 300px;
+    height: 200px;
+    margin: 100px 50px 0;
 }
 
 header #searchField form {
