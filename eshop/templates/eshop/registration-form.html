@@ -19,7 +19,7 @@
 
     <header>
 
-        <img src="{% static 'eshop/images/logo.png' %}" alt="Our Logo">
+        <a href="{% url 'homepage' %}"><img src="{% static 'eshop/images/logo.png' %}" alt="OurLogo"></a>
 
     </header>
 
@@ -29,7 +29,11 @@
 
         <form method="POST", action="">
             {% csrf_token %}
-            <p>{{form.errors}}</p>
+
+            <div class="form-error">
+                <p>{{form.errors}}</p>
+            </div>
+            
 
             {% for field in form %}
             <div id="", class="labelContainer">
@@ -38,7 +42,6 @@
                     <i class="fa fa-user push"></i>
                     {{field}}
                 </div>
-
             </div>
 
             {% endfor %}

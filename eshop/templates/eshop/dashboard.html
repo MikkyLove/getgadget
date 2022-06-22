@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login (getgadget.com)</title>
+        <link rel="stylesheet" href="{% static 'eshop/css/formstyles.css' %}">
+        <link rel="shortcut icon" href="{% static 'eshop/images/logo.png' %}">
+    </head>
+    <body>
+        <header>
+
+            <a href="{% url 'homepage' %}"><img src="{% static 'eshop/images/logo.png' %}" alt="OurLogo"></a>
+    
+        </header>
+
+        Welcome
+        {{request.user}}
+        <br>
+        
+        <a href="{% url 'logout' %}"><button class="seeMoreButton">LOGOUT</button></a>
+    </body>
+</html>

@@ -1,1 +1,51 @@
-login
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login (getgadget.com)</title>
+        <link rel="stylesheet" href="{% static 'eshop/css/formstyles.css' %}">
+        <link rel="shortcut icon" href="{% static 'eshop/images/logo.png' %}">
+    </head>
+    <body>
+        <header>
+
+            <a href="{% url 'homepage' %}"><img src="{% static 'eshop/images/logo.png' %}" alt="OurLogo"></a>
+    
+        </header>
+
+        {% for message in messages%}
+            <div class="message">
+                {{message}}
+            </div>
+        {% endfor %}
+
+        <div id="formSection">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div id="", class="labelContainer">
+                    <label>Username</label> <br/>
+                    <div class="inputBorder">
+                        <i class="fa fa-user push"></i>
+                        <input type="text" name="username", id="Username", placeholder="jondoe"/>
+                    </div>
+                </div>
+        
+                <div id="", class="labelContainer">
+                    <label>Password</label> <br/>
+                    <div class="inputBorder">
+                        <i class="fa fa-user push"></i>
+                        <input type="password" name="password", id="password"/>
+                    </div>
+                </div>
+
+                <button type="submit">LOGIN</button>
+            </form>
+            <p id="signup">Don't have an account?<a href="{% url 'register' %}">sign up</a></p>
+        </div>
+        
+        
+    </body>
+</html>
