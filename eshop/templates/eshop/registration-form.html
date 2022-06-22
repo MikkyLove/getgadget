@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Form</title>
+    <link rel="stylesheet" href="{% static 'eshop/css/formstyles.css' %}">
+    <link rel="shortcut icon" href="{% static 'eshop/images/logo.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/10d261e7ba.js"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <img src="{% static 'eshop/images/logo.png' %}" alt="Our Logo">
+
+    </header>
+
+    <!-- form section -->
+
+    <div id="formSection">
+
+        <form method="POST", action="">
+            {% csrf_token %}
+            <p>{{form.errors}}</p>
+
+            {% for field in form %}
+            <div id="", class="labelContainer">
+                <label>{{field.label}}</label> <br/>
+                <div class="inputBorder">
+                    <i class="fa fa-user push"></i>
+                    {{field}}
+                </div>
+
+            </div>
+
+            {% endfor %}
+            
+            <!-- <div id="firstNameContainer" class="labelContainer">
+
+                <label>First Name</label> <br>
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-user push"></i>
+                    <input type="text" placeholder="eg. John" minlength="2" name="firstName" id="firstName" autofocus autocomplete>
+
+                </div>
+
+            </div>
+
+
+            <div id="lastNameContainer" class="labelContainer">
+
+                <label>Last Name</label> <br>
+
+                <div class="inputBorder">
+
+
+                    <i class="fa fa-user push"></i>
+                    <input type="text" placeholder="eg. Doe" minlength="2" name="lastName" id="lastName" autocomplete>
+
+                </div>
+            </div>
+
+
+
+            <div id="countryContainer" class="labelContainer">
+
+                <label>Country of Residence</label> <br>
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-flag-checkered push"></i>
+                    <input type="text" placeholder="eg. Nigerian" name="nationality" id="country" autocomplete>
+
+                </div>
+            </div>
+
+            <div id="emailContainer" class="labelContainer">
+
+                <label>Email Address</label> <br>
+                <div class="inputBorder">
+                    <i class="fa fa-envelope push"></i>
+                    <input type="email" placeholder="eg. johndoe@gmail.com" minlength="10" name="email" id="email" autocomplete>
+                </div>
+
+            </div>
+
+
+
+
+
+            <div id="phoneNumberContainer" class="labelContainer">
+
+                <label>Phone Number</label> <br>
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-phone-square push"></i>
+                    <input type="number" placeholder="eg. +1 2345 6789" name="phoneNumber" id="phoneNumber" autocomplete>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div id="usernameContainer" class="labelContainer">
+
+                <label>Username</label> <br>
+
+                <div class="inputBorder">
+
+                    <i class="fa fa-user-circle-o push"></i>
+                    <input type="text" placeholder="eg. JohnDoe" minlength="2" name="username" id="username">
+
+                </div>
+            </div>
+
+
+
+
+
+            <div id="passwordContainer" class="labelContainer">
+
+                <label>Password</label> <br>
+                <div class="inputBorder">
+
+                    <i class="fa fa-lock push"></i>
+                    <input type="password" placeholder="eg. 123456" minlength="6" name="password" id="password" autocomplete> <i class="fa fa-eye" onclick="showPassword()" id="eyeControl" style="color:rgb(255, 0, 0);"></i>
+
+                </div>
+
+            </div> -->
+
+            <button type="submit">SUBMIT</button>
+            <button type="reset">RESET</button>
+
+        </form>
+
+        <p id="signup">Already Registered, pls <a href="{% url 'login' %}">sign in</a></p>
+
+    </div>
+
+    <script src="{% static 'eshop/js/script.js' %}"></script>
+
+</body>
+
+</html>

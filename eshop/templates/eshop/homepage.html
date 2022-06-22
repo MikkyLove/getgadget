@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link rel="shortcut icon" href="{% static 'eshop/images/logo.png' %}">
+
+    <!-- <link rel="stylesheet" href="../bootstrap/css/bootstrap.css"> -->
+    <link rel="stylesheet" href="{% static 'eshop/css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/10d261e7ba.js"></script>
+</head>
+
+<body>
+
+    <!-- header section -->
+
+    <header>
+
+        <div id="logo">
+
+            <img src="{% static 'eshop/images/logo.png' %}" alt="OurLogo">
+
+            <div id="login">
+
+                <a href="{% url 'register' %}"><button class="seeMoreButton">SIGN UP</button></a>
+                <a href="{% url 'login' %}"><button class="seeMoreButton" onclick="notReady()">LOGIN</button></a>
+            </div>
+        </div>
+
+
+        <div id="searchField">
+
+            <form action="">
+
+                <i class=" fa fa-search "></i>
+
+                <input type="text" id="searchBar" placeholder=' Search gadgets...' autofocus><button id="searchBtn" type="submit">SEARCH</button> </i>
+
+            </form>
+        </div>
+
+    </header>
+
+    <br>
+
+    <div class="hr">
+        <p>..<span id="hr">...</span></p>
+    </div>
+
+
+    <!-- main section -->
+
+    <main>
+
+        <!-- laptop sectoin -->
+
+        {% for cat in product_category %}
+        <section id="{{cat.name.lower}}">
+            <h1><span class="blue">{{cat.catchphrase}}</span></h1>
+            <div id="{{cat.name.lower}}Img">
+                {% for product in cat.product_set.all %}
+                <img src="{{product.image.url}}"/>
+                {% endfor %}
+            </div>
+            
+            <a href="" onclick="notReady()" class="seeMore" title="Explore!!!"><button class="seeMoreButton">SEE MORE...</button></a>
+
+        </section>
+        {% endfor %}
+
+        <section id="laptop">
+
+            <h1>LAPTOPS <span class="blue">HABITAT</span></h1>
+
+            <div id="laptopImg">
+
+                <img src="../../images/laptops/laptop-and-phone.jpeg" alt="">
+                <img src="../../images/laptops/laptop-on-table.png" alt="">
+                <img src="../../images/laptops/neon-laptop.png" alt="">
+                <img src="../../images/laptops/apple-laptop.jpg" alt="">
+                <img src="../../images/laptops/laptop-a.jpg" alt="">
+                <img src="../../images/laptops/laptop-and-phone.jpeg" alt="">
+                <img src="../../images/laptops/laptop-b.jpg" alt="">
+
+                <img src="../../images/laptops/laptop-c.jpg" alt="">
+                <img src="../../images/laptops/laptop-d.jpg" alt="">
+                <img src="../../images/laptops/laptop-e.jpg" alt="">
+                <img src="../../images/laptops/laptop-f.jpg" alt="">
+                <img src="../../images/laptops/laptop-g.jpg" alt="">
+                <img src="../../images/laptops/mac-book.jpg" alt="">
+                <img src="../../images/laptops/screens.png" alt="">
+
+            </div>
+
+            <a href="" onclick="notReady()" class="seeMore" title="Explore!!!"><button class="seeMoreButton">SEE MORE..</button></a>
+
+
+        </section>
+
+
+
+        <!-- phone section -->
+
+
+
+        <div class="hr">
+            <p>..<span id="hr">...</span></p>
+        </div>
+
+        <section id="phone">
+
+            <h1><span class="blue">DWELLING</span> OF <span class="red">PHONES</span></h1>
+
+            <div id="phoneImg">
+
+                <img src="../../images/cellphones/iphone-a.jpg" alt="A Cellphone">
+                <img src="../../images/cellphones/iphone-b.jpg" alt="">
+                <img src="../../images/cellphones/iphone-c.jpg" alt="">
+                <img src="../../images/cellphones/iphone.jpg" alt="">
+                <img src="../../images/cellphones/phone-b.png" alt="">
+                <img src="../../images/cellphones/phone-c.jpg" alt="">
+                <img src="../../images/cellphones/phone-d.jpg" alt="">
+                <img src="../../images/cellphones/phone-e.jpg" alt="">
+                <img src="../../images/cellphones/phone-f.png" alt="">
+                <img src="../../images/cellphones/phone.jpg" alt="">
+
+            </div>
+
+            <a href="" onclick="notReady()" class="seeMore" title="Explore!!!"><button class="seeMoreButton">SEE MORE...</button></a>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="{% static 'eshop/js/script.js' %}"></script>
+
+
+</body>
+
+</html>
