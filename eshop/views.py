@@ -52,4 +52,6 @@ def userlogout(request):
 
 @login_required(login_url='login')
 def dashboard(request, pk=None):
-    return render(request, 'eshop/dashboard.html')
+    categories = Category.objects.all()
+    context = {"product_category":categories}
+    return render(request, 'eshop/dashboard.html', context)

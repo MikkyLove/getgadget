@@ -50,18 +50,13 @@
 
     <br>
 
-    <div class="hr">
-        <p>..<span id="hr">...</span></p>
-    </div>
-
-
-    <!-- main section -->
 
     <main>
 
-        <!-- laptop sectoin -->
-
         {% for cat in product_category %}
+        <div class="hr">
+            <p>..<span id="hr">...</span></p>
+        </div>
         <section id="{{cat.name.lower}}">
             <h1><span class="blue">{{cat.catchphrase}}</span></h1>
             <div id="{{cat.name.lower}}Img">
